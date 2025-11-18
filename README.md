@@ -336,7 +336,8 @@ Aprendí a empaquetar la aplicación web en contenedores reproducibles con Docke
 ## ¿Qué fue lo más desafiante y cómo lo resolvería en un entorno real?
 
 ```text
-Lo más desafiante fue coordinar todos los servicios (Nginx, aplicación Flask, Prometheus, Node Exporter y Grafana) para que se comunicaran correctamente, exponiendo puertos y volúmenes adecuados tanto localmente como en EC2. En un entorno real usaría herramientas de infraestructura como código (Terraform, Ansible) y orquestadores como Kubernetes para automatizar despliegues, además de automatizar certificados SSL con Let’s Encrypt y configurar Alertmanager para enviar notificaciones a canales de incidentes (correo, Slack, etc.).
+Lo más desafiante fue coordinar todos los servicios (Nginx, aplicación Flask, Prometheus, Node Exporter y Grafana) para que se comunicaran correctamente, exponiendo puertos y volúmenes adecuados tanto localmente como en EC2. En un entorno real usaría herramientas de infraestructura como código (Terraform, Ansible) y orquestadores como Kubernetes para automatizar despliegues, además de automatizar certificados SSL con Let’s Encrypt y configurar Alertmanager para enviar notificaciones a canales de incidentes (correo, Slack, etc.)
+.
 ```
 
 ## ¿Qué beneficio aporta la observabilidad en el ciclo DevOps?
