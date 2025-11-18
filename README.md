@@ -37,6 +37,29 @@ Cliente → Nginx (HTTPS 443) → Flask (app:5000)
              ├─ Prometheus (9090) ← Node Exporter (9100)
              └─ Grafana (3000) → lee métricas desde Prometheus
 
----
+```
 
 ## 3. Estructura del Proyecto
+
+```text
+MiniWebApp/
+├─ webapp/                  # Código de la MiniWebApp (Flask)
+│  ├─ run.py
+│  ├─ config.py
+│  └─ ...
+├─ nginx/
+│  └─ default.conf          # Configuración Nginx con HTTPS + proxy_pass
+├─ certs/
+│  ├─ miniwebapp.crt        # Certificado SSL (self-signed para pruebas)
+│  └─ miniwebapp.key        # Clave privada
+├─ prometheus/
+│  ├─ prometheus.yml        # Configuración de scrapes
+│  └─ alerts.yml            # Reglas de alerta
+├─ grafana/
+│  └─ dashboards/
+│     └─ 3662-prometheus-2.0-overview.json  # Dashboard importado (ID 3662)
+├─ Dockerfile               # Imagen de la app Flask
+├─ docker-compose.yml       # Orquestación de la solución completa
+├─ requirements.txt         # Dependencias de Python (Flask, SQLAlchemy, etc.)
+└─ init.sql                 # Script SQL de la MiniWebApp (opcional)
+```
