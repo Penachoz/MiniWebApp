@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    container_name: miniwebapp-app
+    restart: unless-stopped
+
+  nginx:
+    image: nginx:alpine
+    container_name: miniwebapp-nginx
+    depends_on:
+      - app
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./certs/miniwebapp.crt:/etc/ssl/certs/miniwebapp.crt:ro
+      - ./certs/miniwebapp.key:/etc/ssl/private/miniwebapp.key:ro
+    restart: unless-stopped
