@@ -36,3 +36,7 @@ Cliente → Nginx (HTTPS 443) → Flask (app:5000)
              │
              ├─ Prometheus (9090) ← Node Exporter (9100)
              └─ Grafana (3000) → lee métricas desde Prometheus
+
+---
+
+## 3. Estructura del Proyecto
