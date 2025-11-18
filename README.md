@@ -329,19 +329,12 @@ Importar y verificar que los gráficos muestren datos.
 
 ## ¿Qué aprendí al integrar Docker, AWS y Prometheus?
 
-```text
-Aprendí a empaquetar la aplicación web en contenedores reproducibles con Docker y a desplegarla en un servidor real en AWS EC2 reutilizando el mismo docker-compose.yml. Al integrar Prometheus y Node Exporter entendí cómo recolectar métricas de infraestructura (CPU, memoria, disco) y cómo usar esas métricas para definir alertas y alimentar dashboards en Grafana. Esto convierte la aplicación en un sistema observable, no solo “que funciona”.
-```
+Aprendí a empaquetar la aplicación web en contenedores reproducibles con Docker y a desplegarla en un servidor real en AWS EC2 reutilizando el mismo `docker-compose.yml`. Al integrar Prometheus y Node Exporter entendí cómo recolectar métricas de infraestructura (CPU, memoria, disco) y cómo usar esas métricas para definir alertas y alimentar dashboards en Grafana. Esto convierte la aplicación en un sistema observable, no solo “que funciona”.
 
 ## ¿Qué fue lo más desafiante y cómo lo resolvería en un entorno real?
 
-```text
-Lo más desafiante fue coordinar todos los servicios (Nginx, aplicación Flask, Prometheus, Node Exporter y Grafana) para que se comunicaran correctamente, exponiendo puertos y volúmenes adecuados tanto localmente como en EC2. En un entorno real usaría herramientas de infraestructura como código (Terraform, Ansible) y orquestadores como Kubernetes para automatizar despliegues, además de automatizar certificados SSL con Let’s Encrypt y configurar Alertmanager para enviar notificaciones a canales de incidentes (correo, Slack, etc.)
-.
-```
+Lo más desafiante fue coordinar todos los servicios (Nginx, aplicación Flask, Prometheus, Node Exporter y Grafana) para que se comunicaran correctamente, exponiendo puertos y volúmenes adecuados tanto localmente como en EC2. En un entorno real usaría herramientas de infraestructura como código (Terraform, Ansible) y orquestadores como Kubernetes para automatizar despliegues, además de automatizar certificados SSL con Let’s Encrypt y configurar Alertmanager para enviar notificaciones a canales de incidentes (correo, Slack, etc.).
 
 ## ¿Qué beneficio aporta la observabilidad en el ciclo DevOps?
 
-```text
 La observabilidad permite ver en tiempo real cómo se comporta la aplicación y la infraestructura después de cada cambio: uso de CPU, memoria, disco, errores, latencias, etc. Esto reduce el tiempo de detección y resolución de problemas (MTTD/MTTR), facilita analizar el impacto de cada despliegue y ayuda a tomar decisiones informadas sobre escalamiento, capacidad y optimización. En DevOps, la observabilidad es clave para mantener la confiabilidad del servicio mientras se entregan nuevas funcionalidades de manera continua.
-```
